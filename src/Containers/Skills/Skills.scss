@@ -1,0 +1,97 @@
+.app__skills_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+    background-color: var(--background-secondary-color);
+}
+
+.app__skill-filter{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.app__skill-filter-item{
+    margin: 1rem 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--white-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--font-color);
+    font-size: 0.8rem;
+    color: var(--font-color);
+
+    &:hover{
+        background-color: var(--gray-color);
+        color: var(--font-color);
+    }
+}
+
+.item-active{
+    background-color: var(--primary-color);
+    color: var(--button-font-color);
+
+    &:hover{
+        background-color: var(--primary-hover-color);
+        color: var(--button-font-color);
+    }
+}
+
+.app__skill_data-wrapper{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.app__skill_data{
+    width: 80%;
+    display: flex;
+    align-self: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.app__skill_data-item{
+    flex-direction: column;
+    justify-content: space-between;
+    border: 8px solid var(--white-color);
+    background-color: var(--secondary-color);
+    margin: 0.75rem;
+    padding: 1rem;
+    padding-bottom: 0;
+    border-radius: 10px;
+    min-width: 10rem;
+
+    img{
+        width: 70px;
+        height: 60px;
+    }
+
+    p{
+        margin-bottom: 0;
+        margin-top: 1rem;
+        padding: 0 0.75rem;
+        background-color: var(--white-color);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+}
+
+.app__skill_data-scroll{
+    margin: 1rem;
+    width: 40px;
+    height: 100%;
+    color: var(--secondary-color-dark);
+
+    &:hover{
+        color: var(--primary-color);
+    }
+}

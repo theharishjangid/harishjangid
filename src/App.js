@@ -1,11 +1,20 @@
-import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
+import { About, Contact, Experience, Footer, Header, Navbar, Skills,
+} from './Containers'
+import './App.scss';
 
 function App() {
+  const [mode, setMode] = useState('light');
   return (
-    <React.Fragment>
-      portfolio
-    </React.Fragment>
+    <div className="app" app-theme={mode}>
+      <Navbar mode={mode} setMode={setMode}/>
+      <Header />
+      <Skills />
+      <Experience />
+      <About />
+      <Contact />
+      <Footer />
+    </div>
   );
 }
 

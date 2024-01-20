@@ -1,0 +1,56 @@
+.cta__container{
+    display: flex;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    margin-top: 4rem;
+    width: fit-content;
+
+    @media screen and (max-width: 450px) {
+        margin-top: 3rem;
+    }
+}
+
+.cta__primary{
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--button-font-color);
+    padding: 0.5rem 1rem;
+
+    svg{
+        margin-left: 0.75rem;
+    }
+
+    &:hover{
+        cursor: pointer;
+        background-color: var(--primary-hover-color)
+    }
+
+    p {
+        @media screen and (max-width: 400px) {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+.cta__secondary{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: var(--primary-color);
+
+    svg{
+        margin-left: 0.75rem;
+    }
+
+    &:hover{
+        cursor: pointer;
+        background-color: var(--gray-color)
+    }
+
+    p {
+        @media screen and (max-width: 400px) {
+            font-size: 0.7rem;
+        }
+    }
+}
