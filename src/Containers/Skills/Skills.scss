@@ -5,15 +5,32 @@
     justify-content: center;
     padding: 3rem 0;
     background-color: var(--background-secondary-color);
+
+    h2{
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+    }
 }
 
 .app__skill-filter{
+    width: 95%;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
+
+    @media screen and (max-width: 550px) {
+        justify-content: flex-start;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
 }
 
 .app__skill-filter-item{
+    display: flex;
+    white-space: nowrap;
     margin: 1rem 0.5rem;
     padding: 0.5rem 1rem;
     background-color: var(--white-color);
@@ -26,6 +43,16 @@
     &:hover{
         background-color: var(--gray-color);
         color: var(--font-color);
+    }
+
+    @media screen and (max-width: 650px) {
+        padding: 0.5rem;
+    }
+
+    @media screen and (max-width: 550px) {
+        font-size: 0.7rem;
+        padding: 0.4rem;
+        margin: 0.5rem;
     }
 }
 
@@ -43,11 +70,20 @@
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+
+    @media screen and (max-width: 750px) {
+        padding: 1rem;
+    }
+
+    @media screen and (max-width: 500px) {
+        padding: 0.5rem;
+    }
 }
 
 .app__skill_data{
-    width: 80%;
+    width: 85%;
     display: flex;
     align-self: center;
     justify-content: flex-start;
@@ -63,12 +99,13 @@
     flex-direction: column;
     justify-content: space-between;
     border: 8px solid var(--white-color);
-    background-color: var(--secondary-color);
-    margin: 0.75rem;
+    background-color: var(--skills-bg-color);
+    margin: 0.5rem;
     padding: 1rem;
     padding-bottom: 0;
     border-radius: 10px;
     min-width: 10rem;
+    transition: transform 0.3s ease;
 
     img{
         width: 70px;
@@ -83,6 +120,10 @@
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
     }
+
+    &:hover{
+        transform: scale(1.1);
+    }
 }
 
 .app__skill_data-scroll{
@@ -93,5 +134,13 @@
 
     &:hover{
         color: var(--primary-color);
+    }
+
+    @media screen and (max-width: 750px) {
+        margin: 0.5rem;
+        width: 30px;
+    }
+    @media screen and (max-width: 500px) {
+        width: 25px;
     }
 }

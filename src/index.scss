@@ -9,6 +9,8 @@
   --font-base: "Lato", sans-serif;
   --background-color: #F8F9FA;
   --background-secondary-color: #edf2f8;
+
+  --skills-bg-color: #e8e8f8;
   --primary-color: #03045E;
   --primary-hover-color: #03055eb9;
 
@@ -30,14 +32,20 @@
 
 [app-theme="dark"] {
   --background-color: #010123;
-  --background-secondary-color: #454567b9;
+  --background-secondary-color: #37374b56;
+
+  --skills-bg-color: #97bfc7ef;
 
   --primary-color: #CAF0F8;
   --primary-hover-color: #ADE8F4;
 
+  --secondary-color: #90a3a789;
+
   --gray-color3: #CED4DA;
 
   --font-color: #F8F9FA;
+
+  --white-color: #e4e5ec92;
 
   --button-font-color: #212529;
 }

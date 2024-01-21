@@ -11,9 +11,10 @@
 
     @media screen and (max-width: 750px) {
         flex-direction: column;
+        padding-bottom: 2rem;
     }
     @media screen and (max-width: 450px) {
-        padding: 4rem 1rem;
+        padding: 4rem 1rem 2rem 1rem;
     }
 }
 

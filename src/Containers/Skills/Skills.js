@@ -127,6 +127,8 @@ const Skills = () => {
 
   const handleSkillFilter = (item) => {
     if (activeFilter !== item) {
+      const skills_slider = document.getElementById("skills-scrollbar");
+      skills_slider.scrollLeft = 0;
       setActiveFilter(item);
       setAnimateCard([{ y: 100, opacity: 0 }]);
 
@@ -145,52 +147,58 @@ const Skills = () => {
   };
 
   return (
-    <div id="skills" className="app__skills_container">
-      <h2>Technical Proficiency</h2>
-
-      <div className="app__skill-filter">
-        {[
-          "All",
-          "Programming Languages",
-          "Frameworks",
-          "Data Stores",
-          "Others",
-        ].map((item, index) => (
-          <div
-            key={index}
-            onClick={() => handleSkillFilter(item)}
-            className={`app__skill-filter-item app__flex ${
-              activeFilter === item ? "item-active" : ""
-            }`}
-          >
-            {item}
-          </div>
-        ))}
-      </div>
-      <div className="app__skill_data-wrapper">
-        <RxDoubleArrowLeft
-          onClick={handleLeftSlide}
-          className="app__skill_data-scroll"
-        />
-        <motion.div
-          animate={animateCard}
-          transition={{ duration: 0.5, delayChildren: 0.5 }}
-          className="app__skill_data"
-          id="skills-scrollbar"
-        >
-          {skill_data.map((skill, index) => (
-            <div className="app__skill_data-item app__flex" key={index}>
-              <img src={skill.logo} alt={skill.name} />
-              <p>{skill.name}</p>
+    <React.Fragment>
+      <motion.div
+        whileInView={{ x: [200, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}
+        className="app__skills_container"
+        id="skills"
+      >
+        <h2>Technical Proficiency</h2>
+        <div className="app__skill-filter">
+          {[
+            "All",
+            "Programming Languages",
+            "Frameworks",
+            "Data Stores",
+            "Others",
+          ].map((item, index) => (
+            <div
+              key={index}
+              onClick={() => handleSkillFilter(item)}
+              className={`app__skill-filter-item app__flex ${
+                activeFilter === item ? "item-active" : ""
+              }`}
+            >
+              {item}
             </div>
           ))}
-        </motion.div>
-        <RxDoubleArrowRight
-          onClick={handleRightSlide}
-          className="app__skill_data-scroll"
-        />
-      </div>
-    </div>
+        </div>
+        <div className="app__skill_data-wrapper">
+          <RxDoubleArrowLeft
+            onClick={handleLeftSlide}
+            className="app__skill_data-scroll"
+          />
+          <motion.div
+            animate={animateCard}
+            transition={{ duration: 0.5, delayChildren: 0.5 }}
+            className="app__skill_data"
+            id="skills-scrollbar"
+          >
+            {skill_data.map((skill, index) => (
+              <div className="app__skill_data-item app__flex" key={`skill-${index}`}>
+                <img src={skill.logo} alt={skill.name} />
+                <p>{skill.name}</p>
+              </div>
+            ))}
+          </motion.div>
+          <RxDoubleArrowRight
+            onClick={handleRightSlide}
+            className="app__skill_data-scroll"
+          />
+        </div>
+      </motion.div>
+    </React.Fragment>
   );
 };
 
