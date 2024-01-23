@@ -3,7 +3,16 @@
 
     h2{
         color: var(--primary-color);
-        margin: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
+
+        @media screen and (max-width: 750px) {
+            font-size: 1.8rem;
+        }
+
+        @media screen and (max-width: 450px) {
+            font-size: 1.5rem;
+        }
     }
 
     .vertical-timeline::before {
@@ -15,6 +24,10 @@
         font-size: 0.9rem;
         font-weight: 400;
         margin: 0;
+
+        @media screen and (max-width: 450px) {
+            line-height: 1rem;
+        }
     }
 
     .vertical-timeline-element-content {
@@ -36,7 +49,7 @@
     }
 
     @media screen and (max-width: 750px) {
-        padding-bottom: 2rem;
+        padding: 2rem;
     }
     @media screen and (max-width: 450px) {
         padding: 2rem 1rem;
@@ -47,7 +60,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
 }
 
 .app__experience_card-img{
@@ -75,11 +87,31 @@
         color: var(--primary-color);
         font-size: 1.3rem;
         font-weight: 500;
+
+        svg{
+            margin-right: 0.5rem;
+        }
+
+        @media screen and (max-width: 750px) {
+            font-size: 1.1rem;
+        }
+
+        @media screen and (max-width: 450px) {
+            font-size: 1rem;
+        }
     }
     h4{
         color: var(--neutral-color);
         font-size: 1.1rem;
         font-weight: 400;
+
+        @media screen and (max-width: 750px) {
+            font-size: 1rem;
+        }
+
+        @media screen and (max-width: 450px) {
+            font-size: 0.95rem;
+        }
     }
     h5{
         padding: 0.25rem 0 1rem 0;
@@ -94,5 +126,13 @@
         font-size: 1rem;
         font-weight: 400;
         color: var(--font-color);
+
+        @media screen and (max-width: 750px) {
+            font-size: 0.95rem;
+        }
+
+        @media screen and (max-width: 450px) {
+            font-size: 0.9rem;
+        }
     }
 }

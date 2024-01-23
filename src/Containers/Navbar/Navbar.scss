@@ -88,6 +88,10 @@
     height: 25px;
     color: var(--primary-color);
 
+    &:hover{
+        cursor: pointer;
+    }
+
     @media screen and (min-width: 2000px) {
         width: 180px;
         height: 40px;
@@ -114,6 +118,10 @@
         width: 70%;
         height: 70%;
         color: var(--background-color);
+
+        &:hover{
+            cursor: pointer;
+        }
     }
 
     div {

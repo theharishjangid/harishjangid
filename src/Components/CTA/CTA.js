@@ -11,10 +11,10 @@ const CTA = (props) => {
         <p>Download CV</p>
         <FiDownload />
       </div>
-      <div className="cta__secondary">
+      <a href="#contact" className="cta__secondary">
         <p>Get In Touch</p>
         <BiMessageDetail />
-      </div>
+      </a>
     </div>
   );
 };

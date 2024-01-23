@@ -7,8 +7,25 @@
     background-color: var(--background-secondary-color);
 
     h2{
+        font-size: 2rem;
         color: var(--primary-color);
         margin-bottom: 1.5rem;
+
+        @media screen and (max-width: 750px) {
+            font-size: 1.8rem;
+        }
+
+        @media screen and (max-width: 450px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        padding: 3rem 0;
+    }
+
+    @media screen and (max-width: 750px) {
+        padding: 2rem 0;
     }
 }
 
@@ -119,6 +136,15 @@
         background-color: var(--white-color);
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
+        font-size: 1rem;
+
+        @media screen and (max-width: 750px) {
+            font-size: 0.9rem;
+        }
+
+        @media screen and (max-width: 450px) {
+            font-size: 0.8rem;
+        }
     }
 
     &:hover{

@@ -19,7 +19,7 @@ const Navbar = (props) => {
         )}
       </div>
       <ul className="app__navbar-links">
-        {["home", "skills", "experience", "about", "contact"].map((item) => (
+        {["home", "about", "experience", "skills", "contact"].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <a href={`#${item}`}>{item}</a>
             <div />
@@ -59,7 +59,7 @@ const Navbar = (props) => {
               />
             )}
             <ul>
-              {["home", "skills", "experience", "about", "contact"].map(
+              {["home", "about", "experience", "skills", "contact"].map(
                 (item) => (
                   <li key={item}>
                     <a href={`#${item}`} onClick={() => setToggle(false)}>

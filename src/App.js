@@ -9,9 +9,9 @@ function App() {
     <div className="app" app-theme={mode}>
       <Navbar mode={mode} setMode={setMode}/>
       <Header />
-      <Skills />
-      <Experience />
       <About />
+      <Experience />
+      <Skills />
       <Contact />
       <Footer />
     </div>

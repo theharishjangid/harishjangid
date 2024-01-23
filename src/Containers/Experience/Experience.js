@@ -11,6 +11,9 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { IoSchool } from "react-icons/io5";
+import { MdWork } from "react-icons/md";
+
 
 const experiences = [
   {
@@ -20,6 +23,7 @@ const experiences = [
     date: "Jul, 2020 - Present",
     desc: "",
     logo: draupLogo,
+    icon: MdWork,
     role: "Software Development Engineer II",
     promotions: [
       {
@@ -99,6 +103,7 @@ const experiences = [
     date: "Jan, 2020 - Jun, 2020",
     desc: "Worked as a back-end software developer with hands-on experience in building restful APIs for web application.",
     logo: zinnovLogo,
+    icon: MdWork,
     role: "Software Developer Intern",
     skills: [
       "Django REST Framework",
@@ -122,6 +127,7 @@ const experiences = [
     date: "Jun, 2017 - Jul, 2017",
     desc: "",
     logo: spyryLogo,
+    icon: MdWork,
     role: "Student Intern",
     skills: ["Programming"],
   },
@@ -131,6 +137,7 @@ const experiences = [
     date: "2016 - 2020",
     desc: "",
     logo: pesLogo,
+    icon: IoSchool,
     role: "Bachelor of Technology - (EEE)",
     skills: [
       "Microsoft Office",
@@ -150,6 +157,7 @@ const experiences = [
     date: "2014 - 2016",
     desc: "",
     logo: sjpucLogo,
+    icon: IoSchool,
     role: "12th Grade - (PCME)",
     skills: ["Microsoft Office"],
   },
@@ -161,6 +169,7 @@ const Experience = () => {
       <motion.div
         whileInView={{ x: [-200, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
         className="app__experience_heading"
       >
         <h2>Professional Journey</h2>
@@ -176,7 +185,7 @@ const Experience = () => {
             }
           >
             <div className="app__experience_card_data">
-              <h3>{experience.role}</h3>
+              <h3>{<experience.icon/ >}{experience.role}</h3>
               <h4>{experience.name}</h4>
               {experience.about && <h5>{experience.about}</h5>}
               <ul>

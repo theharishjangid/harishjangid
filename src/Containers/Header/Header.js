@@ -10,6 +10,7 @@ const Header = () => {
     <div id="home" className="app__header app__flex">
       <motion.div
         whileInView={{ x: [-200, 0], opacity: [0, 1] }}
+        viewport={{ once: true }}
         transition={{ duration: 0.5 }}
         className="app__header-info"
       >
@@ -21,14 +22,16 @@ const Header = () => {
         <CTA className="header__cta" />
       </motion.div>
       <motion.div
-        whileInView={{ opacity: [0, 1] }}
+        whileInView={{ scale: [0.5, 1], opacity: [0, 1] }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
+        viewport={{ once: true }}
         className="app__header-img"
       >
         <img src={Profile} alt="profile" />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 0.75, ease: "easeInOut" }}
+          viewport={{ once: true }}
           src={ProfileBG}
           alt="profile_bg"
           className="overlay_bg"
