@@ -1,7 +1,7 @@
 .app__contact_container{
     width: 100%;
     display: flex;
-    padding: 3rem 6rem;
+    padding: 3rem;
     flex-direction: column;
     align-items: center;
 
@@ -42,7 +42,12 @@
 .app__contact_section{
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 100%;
+
+    @media screen and (max-width: 750px) {
+        flex-direction: column;
+    }
 }
 
 .app__contact_section-info{
@@ -58,17 +63,33 @@
         font-weight: 300;
         color: var(--font-color);
         margin-bottom: 2rem;
+
+        @media screen and (max-width: 750px) {
+            margin-bottom: 1rem;
+        }
+
+        @media screen and (max-width: 450px) {
+            font-size: 0.9rem;
+        }
     }
 
     span {
         display: flex;
         align-items: center;
-        font-size: 2.5rem;
+        font-size: 2rem;
         color:  var(--neutral-color);
         margin-bottom: 1rem;
 
         svg{
             margin-left: 0.5rem;
+        }
+
+        @media screen and (max-width: 750px) {
+            font-size: 1.7rem;
+        }
+
+        @media screen and (max-width: 450px) {
+            font-size: 1.4rem;
         }
     }
 
@@ -92,6 +113,14 @@
             width: 40px;
             height: 100%;
             margin-right: 1rem;
+
+            @media screen and (max-width: 750px) {
+                width: 30px;
+            }
+
+            @media screen and (max-width: 450px) {
+                width: 25px;
+            }
         }
 
         p {
@@ -102,7 +131,15 @@
 
         &:hover {
             box-shadow: 0 0 5px var(--primary-color);
-          }
+        }
+
+        @media screen and (max-width: 750px) {
+            margin: 0.5rem 0;
+            padding: 0.5rem 1rem;
+        }
+    }
+    @media screen and (max-width: 750px) {
+        width: 100%;
     }
 }
 
@@ -137,6 +174,14 @@
             font-size: 0.9rem;
             color: var(--black-color);
             outline: none;
+
+            @media screen and (max-width: 750px) {
+                padding: 0.8rem;
+            }
+
+            @media screen and (max-width: 450px) {
+                padding: 0.7rem;
+            }
         }
 
         textarea {
@@ -145,6 +190,10 @@
 
         &:hover {
             box-shadow: 0 0 5px var(--primary-color);
+        }
+
+        @media screen and (max-width: 450px) {
+            margin: 0.6rem 0;
         }
     }
 
@@ -183,11 +232,21 @@
         &:disabled{
             background-color: var(--gray-color);
         }
+
+        @media screen and (max-width: 750px) {
+            margin-top: 1rem ;
+            padding: 0.6rem 1rem;
+            font-size: 0.9rem;
+        }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 750px) {
         width: 100%;
         margin: 1rem 0;
+    }
+
+    @media screen and (max-width: 450px) {
+        margin: 0;
     }
 }
 
@@ -205,18 +264,39 @@
         height: 7rem;
         color: var(--success-color);
         margin: 1rem;
+
+        @media screen and (max-width: 750px) {
+            width: 6rem;
+            height: 6rem;
+        }
     }
 
     h3 {
         font-weight: 500;
         font-size: 1.3rem;
         margin-top: 0.5rem;
+
+        @media screen and (max-width: 450px) {
+            font-size: 1.1rem;
+        }
     }
 
     p {
         font-weight: 300;
         font-size: 0.9rem;
         margin-top: 0.2rem;
+
+        @media screen and (max-width: 450px) {
+            font-size: 0.8rem;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        height: 380px;
+    }
+
+    @media screen and (max-width: 450px) {
+        height: 380px;
     }
 
 }

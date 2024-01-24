@@ -7,13 +7,13 @@ function App() {
   const [mode, setMode] = useState('light');
   return (
     <div className="app" app-theme={mode}>
-      <Navbar mode={mode} setMode={setMode}/>
+      <Navbar mode={mode} setMode={setMode} />
       <Header />
       <About />
       <Experience />
       <Skills />
       <Contact />
-      <Footer />
+      <Footer mode={mode} />
     </div>
   );
 }

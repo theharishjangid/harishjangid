@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.scss";
 import Logo from "../../Assets/logo.svg";
-import LightLogo from "../../Assets/light logo.svg";
+import LightLogo from "../../Assets/light_logo.svg";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { BsMoonStars, BsMoonStarsFill } from "react-icons/bs";
 import { motion } from "framer-motion";
@@ -13,14 +13,14 @@ const Navbar = (props) => {
     <nav className="app__navbar">
       <div className="app__navbar-logo">
         {props.mode === "light" ? (
-          <img src={Logo} alt="logo"></img>
+          <img src={Logo} alt="logo" />
         ) : (
-          <img src={LightLogo} alt="logo"></img>
+          <img src={LightLogo} alt="light_logo" />
         )}
       </div>
       <ul className="app__navbar-links">
         {["home", "about", "experience", "skills", "contact"].map((item) => (
-          <li className="app__flex p-text" key={`link-${item}`}>
+          <li className="app__flex p-text" key={`footer-link-${item}`}>
             <a href={`#${item}`}>{item}</a>
             <div />
           </li>
@@ -61,7 +61,7 @@ const Navbar = (props) => {
             <ul>
               {["home", "about", "experience", "skills", "contact"].map(
                 (item) => (
-                  <li key={item}>
+                  <li key={`menu-link-${item}`}>
                     <a href={`#${item}`} onClick={() => setToggle(false)}>
                       {item}
                     </a>
