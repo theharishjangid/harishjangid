@@ -4,33 +4,69 @@ import { motion } from "framer-motion";
 import { HiMail } from "react-icons/hi";
 import { IoLocation } from "react-icons/io5";
 import { SiGitea } from "react-icons/si";
-import { LuSendHorizonal, LuCheckCircle } from "react-icons/lu";
+import { LuSendHorizonal, LuMailCheck, LuMailX } from "react-icons/lu";
 import { PiChatsFill } from "react-icons/pi";
+import { useFormik } from "formik";
+import { object, string } from "yup";
+import emailjs from "@emailjs/browser";
+
+const service_id = process.env.REACT_APP_SERVICE_ID;
+const template_id = process.env.REACT_APP_TEMPLATE_ID;
+const user_key = process.env.REACT_APP_USER_KEY;
+
+const ContactSchema = object({
+  username: string()
+    .min(2, "Name must be at least 2 characters")
+    .max(100)
+    .required("Please enter your name"),
+  email: string()
+    .email("Please enter a valid email")
+    .required("Please enter your email"),
+  message: string()
+    .min(10, "Message must be at least 10 characters")
+    .required("Please enter the message"),
+});
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [emailStatus, setEmailStatus] = useState(false);
 
-  const { username, email, message } = formData;
+  const {
+    values,
+    errors,
+    touched,
+    isValid,
+    dirty,
+    resetForm,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+  } = useFormik({
+    initialValues: {
+      username: "",
+      email: "",
+      message: "",
+    },
+    validationSchema: ContactSchema,
+    onSubmit: (values) => {
+      setLoading(true);
+      emailjs.send(service_id, template_id, values, user_key).then(
+        (result) => {
+          setEmailStatus(true);
+        },
+        (error) => {
+          setEmailStatus(false);
+        }
+      );
+      setTimeout(() => {
+        setLoading(false);
+        setIsFormSubmitted(true);
+        resetForm();
+      }, 1500);
+    },
+  });
 
-  const handleChangeInput = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = () => {
-    setLoading(true);
-
-    setTimeout(() => {
-      setLoading(false);
-      setIsFormSubmitted(true);
-    }, 1500);
-  };
   return (
     <div className="app__contact_container" id="contact">
       <motion.div
@@ -68,47 +104,72 @@ const Contact = () => {
           </a>
         </motion.div>
         {!isFormSubmitted ? (
-          <motion.div
+          <motion.form
             whileInView={{ scale: [0.5, 1], opacity: [0, 1] }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             viewport={{ once: true }}
             className="app__contact_section-form"
+            onSubmit={handleSubmit}
+            autoComplete="off"
           >
             <div>
               <input
                 type="text"
                 placeholder="Your Name"
                 name="username"
-                value={username}
-                onChange={handleChangeInput}
+                value={values.username}
+                onChange={handleChange}
+                onBlur={handleBlur}
               />
+              {errors.username && touched.username ? (
+                <p>{errors.username}</p>
+              ) : null}
             </div>
             <div>
               <input
                 type="email"
                 placeholder="Your Email"
                 name="email"
-                value={email}
-                onChange={handleChangeInput}
+                value={values.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
               />
+              {errors.email && touched.email ? <p>{errors.email}</p> : null}
             </div>
             <div>
               <textarea
                 placeholder="Message"
-                value={message}
                 name="message"
-                onChange={handleChangeInput}
+                value={values.message}
+                onChange={handleChange}
+                onBlur={handleBlur}
               />
+              {errors.message && touched.message ? (
+                <p>{errors.message}</p>
+              ) : null}
             </div>
-            <button type="button" onClick={handleSubmit}>
+            <button type="submit" disabled={!(isValid && dirty)}>
               {!loading ? "Send Message" : "Sending..."} <LuSendHorizonal />
             </button>
-          </motion.div>
+          </motion.form>
         ) : (
           <div className="app__contact_section-form_submit">
-            <LuCheckCircle />
-            <h3>Thank you for reaching out!</h3>
-            <p>Your message has been received and I'll be in touch soon.</p>
+            {emailStatus ? (
+              <LuMailCheck className="success_message" />
+            ) : (
+              <LuMailX className="failure_message" />
+            )}
+            <h3>
+              {emailStatus
+                ? "Thank you for reaching out!"
+                : "Oops! Something went wrong."}
+            </h3>
+            <p>
+              {emailStatus
+                ? "Your message has been received and I'll be in touch soon."
+                : "Please try again and I'll get in touch with you soon."}
+            </p>
+            {!emailStatus && <button onClick={()=> setIsFormSubmitted(false)}>Send Again <LuSendHorizonal /></button>}
           </div>
         )}
       </div>

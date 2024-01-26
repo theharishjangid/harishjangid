@@ -7,10 +7,10 @@ import { BiMessageDetail } from "react-icons/bi";
 const CTA = (props) => {
   return (
     <div className="cta__container">
-      <div className="cta__primary">
+      <a href='cv.txt' download="cv.txt" className="cta__primary">
         <p>Download CV</p>
         <FiDownload />
-      </div>
+      </a>
       <a href="#contact" className="cta__secondary">
         <p>Get In Touch</p>
         <BiMessageDetail />

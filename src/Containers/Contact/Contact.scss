@@ -160,6 +160,7 @@
         border-radius: 10px;
         cursor: pointer;
         background-color: var(--primary-color);
+        position: relative;
 
         transition: all 0.3s ease-in-out;
 
@@ -186,6 +187,20 @@
 
         textarea {
             height: 150px;
+        }
+
+        p {
+            color: var(--error-color);
+            position: absolute;
+            bottom: -19px;
+            left: 12px;
+            font-size: 0.85rem;
+            font-weight: 300;
+
+            @media screen and (max-width: 450px) {
+                bottom: -17px;
+                left: 10px;
+            }
         }
 
         &:hover {
@@ -216,7 +231,6 @@
         font-size: 1rem;
 
         transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-        cursor: pointer;
 
         svg {
             width: 20px;
@@ -224,7 +238,8 @@
             margin-left: 1rem;
         }
 
-        &:hover {
+        &:hover:enabled {
+            cursor: pointer;
             background-color: var(--primary-color);
             color: var(--background-secondary-color);
         }
@@ -262,7 +277,6 @@
     svg {
         width: 7rem;
         height: 7rem;
-        color: var(--success-color);
         margin: 1rem;
 
         @media screen and (max-width: 750px) {
@@ -291,6 +305,39 @@
         }
     }
 
+    button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem 1.5rem;
+        border-radius: 5px;
+        border: none;
+        background-color: var(--secondary-color);
+
+        color: var(--font-color);
+        outline: none;
+        margin-top: 1.5rem ;
+
+        font-family: var(--font-base);
+        font-weight: 500;
+        font-size: 1rem;
+
+        transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+        svg {
+            width: 20px;
+            height: 20px;
+            margin: 0 0 0 1rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--primary-color);
+            color: var(--background-secondary-color);
+        }
+    }
+
     @media screen and (max-width: 750px) {
         height: 380px;
     }
@@ -299,4 +346,12 @@
         height: 380px;
     }
 
+}
+
+.success_message {
+    color: var(--success-color);
+}
+
+.failure_message {
+    color: var(--error-color);
 }
