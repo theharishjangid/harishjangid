@@ -1,167 +1,12 @@
 import React from "react";
 import "./Experience.scss";
 import { motion } from "framer-motion";
-import draupLogo from "../../Assets/experience/draup.png";
-import zinnovLogo from "../../Assets/experience/zinnov.png";
-import spyryLogo from "../../Assets/experience/spyry.png";
-import pesLogo from "../../Assets/experience/pes.png";
-import sjpucLogo from "../../Assets/experience/sjpuc.png";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { IoSchool } from "react-icons/io5";
-import { MdWork } from "react-icons/md";
-
-
-const experiences = [
-  {
-    name: "Draup",
-    about:
-      "Draup is an enterprise decision-making platform for global CXO leaders in sales and talent domains.",
-    date: "Jul, 2020 - Present",
-    desc: "",
-    logo: draupLogo,
-    icon: MdWork,
-    role: "Software Development Engineer II",
-    promotions: [
-      {
-        role: "Software Development Engineer II",
-        duration: "Sep, 2022 - Present",
-        skills: [
-          "Elasticsearch",
-          "Django REST Framework",
-          "REST APIs",
-          "Database Management System (DBMS)",
-          "Python (Programming Language)",
-          "Django",
-          "Programming",
-          "SQL",
-          "PostgreSQL",
-          "Jenkins",
-          "Databases",
-          "OAuth",
-          "Back-End Web Development",
-          "Neo4j",
-          "Redis",
-          "Graph Databases",
-          "SAML 2.0",
-          "Security Assertion Markup Language (SAML)",
-        ],
-      },
-      {
-        role: "Software Development Engineer I",
-        duration: "Jul, 2021 - Aug, 2022",
-        skills: [
-          "Elasticsearch",
-          "Django REST Framework",
-          "REST APIs",
-          "Database Management System (DBMS)",
-          "Python (Programming Language)",
-          "Django",
-          "Programming",
-          "SQL",
-          "PostgreSQL",
-          "Jenkins",
-          "Databases",
-          "OAuth",
-          "Back-End Web Development",
-          "Neo4j",
-          "Redis",
-          "Graph Databases",
-          "SAML 2.0",
-          "Security Assertion Markup Language (SAML)",
-        ],
-      },
-      {
-        role: "Associate Software Engineer",
-        duration: "Jul, 2020 - Jun, 2021",
-        skills: [
-          "Django REST Framework",
-          "REST APIs",
-          "Database Management System (DBMS)",
-          "Python (Programming Language)",
-          "Django",
-          "Programming",
-          "SQL",
-          "PostgreSQL",
-          "Jenkins",
-          "Databases",
-          "Back-End Web Development",
-          "Neo4j",
-          "Redis",
-          "Graph Databases",
-        ],
-      },
-    ],
-  },
-  {
-    name: "Zinnov",
-    about:
-      "Zinnov is a global consulting firm enabling digital innovation and building future-ready engineering for enterprises",
-    date: "Jan, 2020 - Jun, 2020",
-    desc: "Worked as a back-end software developer with hands-on experience in building restful APIs for web application.",
-    logo: zinnovLogo,
-    icon: MdWork,
-    role: "Software Developer Intern",
-    skills: [
-      "Django REST Framework",
-      "REST APIs",
-      "Database Management System (DBMS)",
-      "Python (Programming Language)",
-      "Django",
-      "Programming",
-      "SQL",
-      "PostgreSQL",
-      "Jenkins",
-      "Databases",
-      "Back-End Web Development",
-      "Redis",
-    ],
-  },
-  {
-    name: "Spyry Technologies",
-    about:
-      "Spyry Technologies is a leading Information Security Company that specializes in Comprehensive IT Security Solutions, Products and Cyber Security Training.",
-    date: "Jun, 2017 - Jul, 2017",
-    desc: "",
-    logo: spyryLogo,
-    icon: MdWork,
-    role: "Student Intern",
-    skills: ["Programming"],
-  },
-  {
-    name: "PES University",
-    about: "",
-    date: "2016 - 2020",
-    desc: "",
-    logo: pesLogo,
-    icon: IoSchool,
-    role: "Bachelor of Technology - (EEE)",
-    skills: [
-      "Microsoft Office",
-      "Programming",
-      "Algorithms",
-      "Databases",
-      "Database Management System (DBMS)",
-      "C (Programming Language)",
-      "Data Structures",
-      "SQL",
-      "Python (Programming Language)",
-    ],
-  },
-  {
-    name: "St. Joseph's Pre-University College",
-    about: "",
-    date: "2014 - 2016",
-    desc: "",
-    logo: sjpucLogo,
-    icon: IoSchool,
-    role: "12th Grade - (PCME)",
-    skills: ["Microsoft Office"],
-  },
-];
+import ExperienceData from "../../data/experience"
 
 const Experience = () => {
   return (
@@ -175,7 +20,7 @@ const Experience = () => {
         <h2>Professional Journey</h2>
       </motion.div>
       <VerticalTimeline>
-        {experiences.map((experience, index) => (
+        {ExperienceData.map((experience, index) => (
           <VerticalTimelineElement
             date={experience.date}
             icon={

@@ -5,6 +5,7 @@ import LightLogo from "../../Assets/light_logo.svg";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { BsMoonStars, BsMoonStarsFill } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { Socials } from "../../Components";
 
 const Navbar = (props) => {
   const [toggle, setToggle] = useState(false);
@@ -45,6 +46,7 @@ const Navbar = (props) => {
           <motion.div
             whileInView={{ x: [200, 0] }}
             transition={{ duration: 0.5, ease: "easeOut" }}
+            className="app__navbar-menu-div"
           >
             <HiX onClick={() => setToggle(false)} />
             {props.mode === "dark" ? (
@@ -69,6 +71,7 @@ const Navbar = (props) => {
                 )
               )}
             </ul>
+            <Socials socials_class="app__navbar-menu-socials"/>
           </motion.div>
         )}
       </div>

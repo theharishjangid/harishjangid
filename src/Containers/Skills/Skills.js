@@ -1,115 +1,11 @@
 import React, { useState } from "react";
 import "./Skills.scss";
 import { motion } from "framer-motion";
-import PythonLogo from "../../Assets/skills/python.png";
-import JavascriptLogo from "../../Assets/skills/javascript.png";
-import CLogo from "../../Assets/skills/c.png";
-import HTMLLogo from "../../Assets/skills/html.png";
-import CSSLogo from "../../Assets/skills/css.png";
-import ReactLogo from "../../Assets/skills/react.png";
-import DjangoLogo from "../../Assets/skills/django.png";
-import PostgresLogo from "../../Assets/skills/postgres.png";
-import RedisLogo from "../../Assets/skills/redis.png";
-import Neo4jLogo from "../../Assets/skills/neo4j.png";
-import MongodbLogo from "../../Assets/skills/mongodb.png";
-import MysqlLogo from "../../Assets/skills/mysql.png";
-import ESLogo from "../../Assets/skills/elastic.png";
-import DatadogLogo from "../../Assets/skills/datadog.png";
-import GitLogo from "../../Assets/skills/git.png";
-import GithubLogo from "../../Assets/skills/github.png";
-import AWSLogo from "../../Assets/skills/aws.png";
 import { RxDoubleArrowRight, RxDoubleArrowLeft } from "react-icons/rx";
-
-const skills_list = [
-  {
-    name: "Python",
-    logo: PythonLogo,
-    tag: "Programming Languages",
-  },
-  {
-    name: "Javascript",
-    logo: JavascriptLogo,
-    tag: "Programming Languages",
-  },
-  {
-    name: "C",
-    logo: CLogo,
-    tag: "Programming Languages",
-  },
-  {
-    name: "HTML",
-    logo: HTMLLogo,
-    tag: "Programming Languages",
-  },
-  {
-    name: "CSS",
-    logo: CSSLogo,
-    tag: "Programming Languages",
-  },
-  {
-    name: "Django",
-    logo: DjangoLogo,
-    tag: "Frameworks",
-  },
-  {
-    name: "React",
-    logo: ReactLogo,
-    tag: "Frameworks",
-  },
-  {
-    name: "Postgres",
-    logo: PostgresLogo,
-    tag: "Data Stores",
-  },
-  {
-    name: "Redis",
-    logo: RedisLogo,
-    tag: "Data Stores",
-  },
-  {
-    name: "Neo4j",
-    logo: Neo4jLogo,
-    tag: "Data Stores",
-  },
-  {
-    name: "MongoDB",
-    logo: MongodbLogo,
-    tag: "Data Stores",
-  },
-  {
-    name: "MySQL",
-    logo: MysqlLogo,
-    tag: "Data Stores",
-  },
-  {
-    name: "Elasticsearch",
-    logo: ESLogo,
-    tag: "Data Stores",
-  },
-  {
-    name: "Git",
-    logo: GitLogo,
-    tag: "Others",
-  },
-  {
-    name: "Github",
-    logo: GithubLogo,
-    tag: "Others",
-  },
-  {
-    name: "Datadog",
-    logo: DatadogLogo,
-    tag: "Others",
-  },
-  {
-    name: "AWS",
-    logo: AWSLogo,
-    tag: "Others",
-  },
-];
+import { SkillsData, SkillCategories } from "../../data/skills";
 
 const Skills = () => {
-  const [skill_data, setSkill_data] = useState(skills_list);
+  const [skill_data, setSkill_data] = useState(SkillsData);
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
@@ -136,11 +32,9 @@ const Skills = () => {
         setAnimateCard([{ y: 0, opacity: 1 }]);
 
         if (item === "All") {
-          setSkill_data(skills_list);
+          setSkill_data(SkillsData);
         } else {
-          setSkill_data(
-            skills_list.filter((skill) => skill.tag.includes(item))
-          );
+          setSkill_data(SkillsData.filter((skill) => skill.category.includes(item)));
         }
       }, 500);
     }
@@ -156,13 +50,7 @@ const Skills = () => {
         <h2>Technical Proficiency</h2>
       </motion.div>
       <div className="app__skill-filter">
-        {[
-          "All",
-          "Programming Languages",
-          "Frameworks",
-          "Data Stores",
-          "Others",
-        ].map((item, index) => (
+        {SkillCategories.map((item, index) => (
           <div
             key={index}
             onClick={() => handleSkillFilter(item)}

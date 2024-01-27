@@ -2,12 +2,7 @@ import React from "react";
 import "./Footer.scss";
 import Logo from "../../Assets/logo.svg";
 import LightLogo from "../../Assets/light_logo.svg";
-import {
-  SiLinkedin,
-  SiStackoverflow,
-  SiGithub,
-  SiTwitter,
-} from "react-icons/si";
+import { Socials } from "../../Components";
 
 const Footer = (props) => {
   const currentYear = new Date().getFullYear().toString();
@@ -31,12 +26,7 @@ const Footer = (props) => {
           </ul>
         </div>
       </div>
-      <div className="app__footer-social">
-        <a href="https://www.linkedin.com/in/harish-jangid-bb54aa184/" target="_blank" rel="noreferrer"><SiLinkedin /></a>
-        <a href="https://twitter.com/theharishjangid" target="_blank" rel="noreferrer"><SiTwitter /></a>
-        <a href="https://stackoverflow.com/users/18743625/harish-jangid" target="_blank" rel="noreferrer"><SiStackoverflow /></a>
-        <a href="https://github.com/theharishjangid" target="_blank" rel="noreferrer"><SiGithub /></a>
-      </div>
+      <Socials socials_class="app__footer-social"/>
     </div>
   );
 };
