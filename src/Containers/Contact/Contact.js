@@ -30,7 +30,7 @@ const ContactSchema = object({
 const Contact = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [emailStatus, setEmailStatus] = useState(false);
+  const [emailStatus, setEmailStatus] = useState(true);
 
   const {
     values,
@@ -38,7 +38,7 @@ const Contact = () => {
     touched,
     isValid,
     dirty,
-    resetForm,
+    submitCount,
     handleBlur,
     handleChange,
     handleSubmit,
@@ -59,10 +59,10 @@ const Contact = () => {
           setEmailStatus(false);
         }
       );
+      console.log(submitCount)
       setTimeout(() => {
         setLoading(false);
         setIsFormSubmitted(true);
-        resetForm();
       }, 1500);
     },
   });
@@ -169,7 +169,13 @@ const Contact = () => {
                 ? "Your message has been received and I'll be in touch soon."
                 : "Please try again and I'll get in touch with you soon."}
             </p>
-            {!emailStatus && <button onClick={()=> setIsFormSubmitted(false)}>Send Again <LuSendHorizonal /></button>}
+            {submitCount < 3 ? (
+              <button onClick={() => setIsFormSubmitted(false)}>
+                Send Again <LuSendHorizonal />
+              </button>
+            ) : (
+              "Limit exceeded. Try again later"
+            )}
           </div>
         )}
       </div>

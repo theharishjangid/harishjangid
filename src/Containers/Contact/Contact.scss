@@ -299,6 +299,11 @@
         font-weight: 300;
         font-size: 0.9rem;
         margin-top: 0.2rem;
+        margin-bottom: 1.5rem ;
+
+        @media screen and (max-width: 750px) {
+            margin-bottom: 1rem ;
+        }
 
         @media screen and (max-width: 450px) {
             font-size: 0.8rem;
@@ -317,7 +322,6 @@
 
         color: var(--font-color);
         outline: none;
-        margin-top: 1.5rem ;
 
         font-family: var(--font-base);
         font-weight: 500;
@@ -335,6 +339,11 @@
             cursor: pointer;
             background-color: var(--primary-color);
             color: var(--background-secondary-color);
+        }
+
+        @media screen and (max-width: 750px) {
+            padding: 0.6rem 1rem;
+            font-size: 0.9rem;
         }
     }
 

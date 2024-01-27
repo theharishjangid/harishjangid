@@ -10,6 +10,7 @@ import {
 } from "react-icons/si";
 
 const Footer = (props) => {
+  const currentYear = new Date().getFullYear().toString();
   return (
     <div className="app__footer_container">
       <div className="app__footer-line" />
@@ -20,7 +21,7 @@ const Footer = (props) => {
           <img src={LightLogo} alt="footer_light_logo" />
         )}
         <div>
-          <p>Ⓒ 2024 Harish Jangid. All Rights Reserved.</p>
+          <p>Ⓒ {currentYear} Harish Jangid. All Rights Reserved.</p>
           <ul>
             {["home", "about", "experience", "skills", "contact"].map((item) => (
               <li key={`nav-link-${item}`}>

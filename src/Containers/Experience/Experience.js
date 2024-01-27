@@ -179,10 +179,11 @@ const Experience = () => {
           <VerticalTimelineElement
             date={experience.date}
             icon={
-              <div id={`experience-${index}`} className="app__experience_card-img">
+              <div className="app__experience_card-img">
                 <img src={experience.logo} alt={experience.name} />
               </div>
             }
+            key={`experience-${index}`}
           >
             <div className="app__experience_card_data">
               <h3>{<experience.icon/ >}{experience.role}</h3>
@@ -191,7 +192,7 @@ const Experience = () => {
               <ul>
                 {experience.promotions &&
                   experience.promotions.map((promotion_data, index) => (
-                    <li id={`promotion-${index}`}>
+                    <li key={`promotion-${index}`}>
                       {promotion_data.role} : {promotion_data.duration}
                     </li>
                   ))}
