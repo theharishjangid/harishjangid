@@ -30,7 +30,7 @@ const ContactSchema = object({
 const Contact = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [emailStatus, setEmailStatus] = useState(true);
+  const [emailStatus, setEmailStatus] = useState(false);
 
   const {
     values,
@@ -53,9 +53,11 @@ const Contact = () => {
       setLoading(true);
       emailjs.send(service_id, template_id, values, user_key).then(
         (result) => {
+          console.log(result);
           setEmailStatus(true);
         },
         (error) => {
+          console.log(error);
           setEmailStatus(false);
         }
       );
