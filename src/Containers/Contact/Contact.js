@@ -49,23 +49,18 @@ const Contact = () => {
       message: "",
     },
     validationSchema: ContactSchema,
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       setLoading(true);
-      emailjs.send(service_id, template_id, values, user_key).then(
+      await emailjs.send(service_id, template_id, values, user_key).then(
         (result) => {
-          console.log(result);
           setEmailStatus(true);
         },
         (error) => {
-          console.log(error);
           setEmailStatus(false);
         }
       );
-      console.log(submitCount)
-      setTimeout(() => {
-        setLoading(false);
-        setIsFormSubmitted(true);
-      }, 1500);
+      setLoading(false);
+      setIsFormSubmitted(true);
     },
   });
 
