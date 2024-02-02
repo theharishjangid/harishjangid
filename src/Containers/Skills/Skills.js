@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./Skills.scss";
 import { motion } from "framer-motion";
 import { RxDoubleArrowRight, RxDoubleArrowLeft } from "react-icons/rx";
-import { SkillCard } from "../../Components"
+import { MdSettingsSuggest } from "react-icons/md";
+import { SkillCard } from "../../Components";
 import { SkillsData, SkillCategories } from "../../data/skills";
 
 const Skills = () => {
@@ -35,7 +36,9 @@ const Skills = () => {
         if (item === "All") {
           setSkill_data(SkillsData);
         } else {
-          setSkill_data(SkillsData.filter((skill) => skill.category.includes(item)));
+          setSkill_data(
+            SkillsData.filter((skill) => skill.category.includes(item))
+          );
         }
       }, 500);
     }
@@ -48,7 +51,10 @@ const Skills = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2>Technical Proficiency</h2>
+        <h2>
+          <MdSettingsSuggest />
+          Technical Proficiency
+        </h2>
       </motion.div>
       <div className="app__skill-filter">
         {SkillCategories.map((item, index) => (
@@ -74,7 +80,9 @@ const Skills = () => {
           className="app__skill_data"
           id="skills-scrollbar"
         >
-          {skill_data.map((skill, index) => <SkillCard index={index} skill_data={skill}/>)}
+          {skill_data.map((skill, index) => (
+            <SkillCard index={index} skill_data={skill} />
+          ))}
         </motion.div>
         <RxDoubleArrowRight
           onClick={handleRightSlide}

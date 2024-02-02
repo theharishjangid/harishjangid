@@ -1,0 +1,55 @@
+.app__awards_container{
+    width: 100%;
+    display: flex;
+    padding: 3rem;
+    flex-direction: column;
+    align-items: center;
+
+    h2{
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+
+        svg{
+            margin-right: 0.5rem;
+        }
+
+        @media screen and (max-width: 750px) {
+            font-size: 1.8rem;
+        }
+
+        @media screen and (max-width: 450px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        padding: 3rem 2rem;
+    }
+
+    @media screen and (max-width: 750px) {
+        padding: 2rem;
+    }
+    @media screen and (max-width: 450px) {
+        padding: 2rem 1rem;
+    }
+}
+
+.app__awards_container-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 900px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}

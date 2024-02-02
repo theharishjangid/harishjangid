@@ -21,7 +21,7 @@ const Navbar = (props) => {
         )}
       </div>
       <ul className="app__navbar-links">
-        {["home", "about", "experience", "skills", "contact"].map((item) => (
+        {["home", "about", "experience", "skills", "awards", "contact"].map((item) => (
           <li className={`app__flex ${
             activeTab === item ? "active_tab" : ""
           }`} key={`footer-link-${item}`} onClick={() => setActiveTab(item)}>
@@ -66,7 +66,7 @@ const Navbar = (props) => {
               />
             )}
             <ul>
-              {["home", "about", "experience", "skills", "contact"].map(
+              {["home", "about", "experience", "skills", "awards", "contact"].map(
                 (item) => (
                   <li key={`menu-link-${item}`}>
                     <a href={`#${item}`} onClick={() => setToggle(false)}>

@@ -1,5 +1,5 @@
-import { IoSchool } from "react-icons/io5";
-import { MdWork } from "react-icons/md";
+import { IoSchoolOutline } from "react-icons/io5";
+import { MdWorkOutline } from "react-icons/md";
 
 import draupLogo from "../Assets/experience/draup.png";
 import zinnovLogo from "../Assets/experience/zinnov.png";
@@ -15,7 +15,7 @@ const ExperienceData = [
       "Draup is an enterprise decision-making platform for global CXO leaders in sales and talent domains.",
     date: "Jul, 2020 - Present",
     logo: draupLogo,
-    icon: MdWork,
+    icon: MdWorkOutline,
     role: "Software Development Engineer II",
     experiences: [
       {
@@ -103,7 +103,7 @@ const ExperienceData = [
       "Zinnov is a global consulting firm enabling digital innovation and building future-ready engineering for enterprises",
     date: "Jan, 2020 - Jun, 2020",
     logo: zinnovLogo,
-    icon: MdWork,
+    icon: MdWorkOutline,
     role: "Software Developer Intern",
     experiences: [
       {
@@ -132,7 +132,7 @@ const ExperienceData = [
       "Spyry Technologies is a leading Information Security Company that specializes in Comprehensive IT Security Solutions, Products and Cyber Security Training.",
     date: "Jun, 2017 - Jul, 2017",
     logo: spyryLogo,
-    icon: MdWork,
+    icon: MdWorkOutline,
     role: "Student Intern",
     experiences: [
       {
@@ -160,7 +160,7 @@ const EducationData = [
     about: "People's Education Society University (PESU), located in Bangalore, India is one of the country's leading teaching and research universities.",
     date: "2016 - 2020",
     logo: pesLogo,
-    icon: IoSchool,
+    icon: IoSchoolOutline,
     role: "Bachelor of Technology",
     experiences: [
       {
@@ -196,7 +196,7 @@ const EducationData = [
     about: "St. Joseph's Pre-University College (SJPUC) is an educational institution located in Bangalore, India. It executes the objectives of the Jesuit philosophy of education.",
     date: "2014 - 2016",
     logo: sjpucLogo,
-    icon: IoSchool,
+    icon: IoSchoolOutline,
     role: "12th Grade",
     experiences: [
       {

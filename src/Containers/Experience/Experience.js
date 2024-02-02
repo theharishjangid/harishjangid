@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { createPortal } from 'react-dom';
+import { createPortal } from "react-dom";
 import "./Experience.scss";
 import { motion } from "framer-motion";
 import {
@@ -8,7 +8,9 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { ExperienceData, EducationData } from "../../data/experience";
-import { ExperienceModal } from "../../Components"
+import { ExperienceModal } from "../../Components";
+import { IoSchool } from "react-icons/io5";
+import { MdWork } from "react-icons/md";
 
 const Experience = (props) => {
   const [timelineModal, setTimelineModal] = useState(false);
@@ -20,7 +22,10 @@ const Experience = (props) => {
         viewport={{ once: true }}
         className="app__experience_heading"
       >
-        <h2>Professional Journey</h2>
+        <h2>
+          <MdWork />
+          Professional Journey
+        </h2>
       </motion.div>
       <VerticalTimeline>
         {ExperienceData.map((experience, index) => (
@@ -50,7 +55,10 @@ const Experience = (props) => {
         viewport={{ once: true }}
         className="app__experience_heading"
       >
-        <h2>Educational Journey</h2>
+        <h2>
+          <IoSchool />
+          Educational Journey
+        </h2>
       </motion.div>
       <VerticalTimeline>
         {EducationData.map((education, index) => (
@@ -75,10 +83,15 @@ const Experience = (props) => {
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
-      {timelineModal && createPortal(
-        <ExperienceModal data={timelineModal} closeModal={setTimelineModal} mode={props.mode}/>,
-        document.getElementById('modals')
-      )}
+      {timelineModal &&
+        createPortal(
+          <ExperienceModal
+            data={timelineModal}
+            closeModal={setTimelineModal}
+            mode={props.mode}
+          />,
+          document.getElementById("modals")
+        )}
     </div>
   );
 };

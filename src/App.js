@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { About, Contact, Experience, Footer, Header, Navbar, Skills,
+import { About, Awards, Contact, Experience, Footer, Header, Navbar, Skills,
 } from './Containers'
 import './App.scss';
 
@@ -12,6 +12,7 @@ function App() {
       <About />
       <Experience mode={mode} />
       <Skills />
+      <Awards />
       <Contact />
       <Footer mode={mode} />
     </div>

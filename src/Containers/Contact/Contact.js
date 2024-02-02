@@ -67,7 +67,7 @@ const Contact = () => {
   return (
     <div className="app__contact_container" id="contact">
       <motion.div
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        whileInView={{ x: [100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
