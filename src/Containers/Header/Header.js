@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.scss";
 import { motion } from "framer-motion";
 import { CTA } from "../../Components";
-import Profile from "../../Assets/profile.svg";
+import Profile from "../../Assets/profile.png";
 import ProfileBG from "../../Assets/profile_bg.svg";
 
 const Header = () => {
