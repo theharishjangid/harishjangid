@@ -10,7 +10,7 @@ function App() {
       <Navbar mode={mode} setMode={setMode} />
       <Header />
       <About />
-      <Experience />
+      <Experience mode={mode} />
       <Skills />
       <Contact />
       <Footer mode={mode} />

@@ -10,7 +10,7 @@ const Socials = (pros) => {
   return (
     <div className={pros.socials_class}>
       <a
-        href="https://www.linkedin.com/in/harish-jangid-bb54aa184/"
+        href="https://www.linkedin.com/in/theharishjangid"
         target="_blank"
         rel="noreferrer"
       >

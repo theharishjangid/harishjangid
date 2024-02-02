@@ -44,7 +44,7 @@ const SkillsData = [
     name: "C",
     logo: CLogo,
     category: "Programming Languages",
-    about: "C is a general-purpose computer programming language. It was created in the 1970s by Dennis Ritchie, and remains very widely used and influential. By design, C's features cleanly reflect the capabilities of the targeted CPUs.",
+    about: "C is a general-purpose computer programming language. By design, C's features cleanly reflect the capabilities of the targeted CPUs.",
     percentage: 90,
   },
   {
@@ -58,7 +58,7 @@ const SkillsData = [
     name: "CSS",
     logo: CSSLogo,
     category: "Programming Languages",
-    about: "Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.",
+    about: "Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.",
     percentage: 70,
   },
   {
@@ -122,7 +122,7 @@ const SkillsData = [
     logo: ESLogo,
     category: "Data Stores",
     about: "Elasticsearch is a search server based on Lucene that provides a distributed, multitenant-capable full-text search engine.",
-    percentage: 100,
+    percentage: 70,
   },
   {
     name: "Git",
@@ -149,7 +149,7 @@ const SkillsData = [
     name: "AWS",
     logo: AWSLogo,
     category: "Others",
-    about: "Amazon Web Services (AWS) is the world's most comprehensive and broadly adopted cloud that includes infrastructure as a service (IaaS) and platform as a service (PaaS) offerings.",
+    about: "Amazon Web Services (AWS) is broadly adopted cloud that includes infrastructure as a service (IaaS) and platform as a service (PaaS) offerings.",
     percentage: 65,
   },
 ];

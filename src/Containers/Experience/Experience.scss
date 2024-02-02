@@ -33,6 +33,10 @@
     .vertical-timeline-element-content {
         background: var(--secondary-color);
         box-shadow: 0 3px 0 var(--primary-color);
+
+        &:hover {
+            cursor: pointer;
+        }
       }
 
     .vertical-timeline-element-content-arrow{
@@ -42,6 +46,10 @@
     .vertical-timeline-element-icon {
         -webkit-box-shadow: 0 0 0 4px var(--primary-color), inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05);
         box-shadow: 0 0 0 4px var(--primary-color), inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05);
+    }
+
+    .vertical-timeline-element-date {
+        color: var(--font-color);
     }
 
     @media screen and (max-width: 1000px) {
@@ -84,7 +92,7 @@
 
 .app__experience_card_data{
     h3{
-        color: var(--primary-color);
+        color: var(--font-color);
         font-size: 1.3rem;
         font-weight: 500;
         display: flex;
@@ -113,28 +121,6 @@
 
         @media screen and (max-width: 450px) {
             font-size: 0.95rem;
-        }
-    }
-    h5{
-        padding: 0.25rem 0 1rem 0;
-        color: var(--font-color);
-        font-size: 1rem;
-        font-weight: 300;
-    }
-    ul{
-        padding-left: 1rem;
-    }
-    li{
-        font-size: 1rem;
-        font-weight: 400;
-        color: var(--font-color);
-
-        @media screen and (max-width: 750px) {
-            font-size: 0.95rem;
-        }
-
-        @media screen and (max-width: 450px) {
-            font-size: 0.9rem;
         }
     }
 }

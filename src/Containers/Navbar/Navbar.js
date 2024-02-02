@@ -9,6 +9,7 @@ import { Socials } from "../../Components";
 
 const Navbar = (props) => {
   const [toggle, setToggle] = useState(false);
+  const [activeTab, setActiveTab] = useState("");
 
   return (
     <nav className="app__navbar">
@@ -21,9 +22,13 @@ const Navbar = (props) => {
       </div>
       <ul className="app__navbar-links">
         {["home", "about", "experience", "skills", "contact"].map((item) => (
-          <li className="app__flex p-text" key={`footer-link-${item}`}>
-            <a href={`#${item}`}>{item}</a>
-            <div />
+          <li className={`app__flex ${
+            activeTab === item ? "active_tab" : ""
+          }`} key={`footer-link-${item}`} onClick={() => setActiveTab(item)}>
+            <a href={`#${item}`} className="active_tab-a">
+              {item}
+              <div className="active_tab-div"/>
+            </a>
           </li>
         ))}
       </ul>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Skills.scss";
 import { motion } from "framer-motion";
 import { RxDoubleArrowRight, RxDoubleArrowLeft } from "react-icons/rx";
+import { SkillCard } from "../../Components"
 import { SkillsData, SkillCategories } from "../../data/skills";
 
 const Skills = () => {
@@ -73,15 +74,7 @@ const Skills = () => {
           className="app__skill_data"
           id="skills-scrollbar"
         >
-          {skill_data.map((skill, index) => (
-            <div
-              className="app__skill_data-item app__flex"
-              key={`skill-${index}`}
-            >
-              <img src={skill.logo} alt={skill.name} />
-              <p>{skill.name}</p>
-            </div>
-          ))}
+          {skill_data.map((skill, index) => <SkillCard index={index} skill_data={skill}/>)}
         </motion.div>
         <RxDoubleArrowRight
           onClick={handleRightSlide}
