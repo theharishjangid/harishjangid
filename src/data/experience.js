@@ -1,11 +1,11 @@
 import { IoSchoolOutline } from "react-icons/io5";
 import { MdWorkOutline } from "react-icons/md";
 
-import draupLogo from "../Assets/experience/draup.png";
-import zinnovLogo from "../Assets/experience/zinnov.png";
-import spyryLogo from "../Assets/experience/spyry.png";
-import pesLogo from "../Assets/experience/pes.png";
-import sjpucLogo from "../Assets/experience/sjpuc.png";
+import draupLogo from "../Assets/experience/draup.svg";
+import zinnovLogo from "../Assets/experience/zinnov.svg";
+import spyryLogo from "../Assets/experience/spyry.svg";
+import pesLogo from "../Assets/experience/pes.svg";
+import sjpucLogo from "../Assets/experience/sjpuc.svg";
 
 const ExperienceData = [
   {

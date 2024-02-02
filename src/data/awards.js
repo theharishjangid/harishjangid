@@ -1,7 +1,7 @@
-import standingOvation from "../Assets/awards/standing_ovation.png";
-import fastTracker from "../Assets/awards/fast_tracker.png";
-import hackathon from "../Assets/awards/hackathon.png";
-import cnrRao from "../Assets/awards/cnr_rao.png";
+import standingOvation from "../Assets/awards/standing_ovation.svg";
+import fastTracker from "../Assets/awards/fast_tracker.svg";
+import hackathon from "../Assets/awards/hackathon.svg";
+import cnrRao from "../Assets/awards/cnr_rao.svg";
 
 const AwardsData = [
     {
