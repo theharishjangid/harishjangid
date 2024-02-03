@@ -7,7 +7,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { ExperienceData, EducationData } from "../../data/experience";
+import { ExperienceData, EducationData } from "../../Data/experience";
 import { ExperienceModal } from "../../Components";
 import { IoSchool } from "react-icons/io5";
 import { MdWork } from "react-icons/md";

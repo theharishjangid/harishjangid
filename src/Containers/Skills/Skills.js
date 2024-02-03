@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { RxDoubleArrowRight, RxDoubleArrowLeft } from "react-icons/rx";
 import { MdSettingsSuggest } from "react-icons/md";
 import { SkillCard } from "../../Components";
-import { SkillsData, SkillCategories } from "../../data/skills";
+import { SkillsData, SkillCategories } from "../../Data/skills";
 
 const Skills = () => {
   const [skill_data, setSkill_data] = useState(SkillsData);

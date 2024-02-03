@@ -2,7 +2,7 @@ import React from "react";
 import "./Awards.scss";
 import { motion } from "framer-motion";
 import { FaAward } from "react-icons/fa";
-import AwardsData from "../../data/awards";
+import AwardsData from "../../Data/awards";
 import Award from "../../Components/Award/Award";
 
 const Awards = () => {
