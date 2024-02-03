@@ -9,12 +9,12 @@ const SkillCard = (props) => {
     <div id={`skill-${props.index}`} className="skill_card__container">
       <div className="skill_card__head">
         <img src={skill_data.logo} alt={skill_data.name} />
-        <h4>{skill_data.name}</h4>
+        <h3>{skill_data.name}</h3>
       </div>
       <div className="skill_card__body">
-        <h5>
+        <h4>
           <BiSolidTagAlt /> {skill_data.category}
-        </h5>
+        </h4>
         <div className="skill_card__text">
           <p>{skill_data.about}</p>
           <motion.div

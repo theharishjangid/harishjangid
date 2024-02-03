@@ -15,7 +15,7 @@ const Header = () => {
         className="app__header-info"
       >
         <h3>
-          👋🏻 Hello, <span>I'm</span>
+          👋🏻 Hello, I'm
         </h3>
         <h1>Harish Jangid</h1>
         <p className="p_header">Crafting innovative solutions through elegant code</p>

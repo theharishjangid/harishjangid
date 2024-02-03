@@ -25,10 +25,10 @@ const About = () => {
           <Socials socials_class="app__about__social"/>
         </motion.div>
         <div className="app__about__info">
-          <h4>
+          <h3>
             Welcome to my digital hub! I'm <span>Harish Jangid</span>, a
             passionate software developer based in Bangalore, India.
-          </h4>
+          </h3>
           <p>
             My journey in programming is fueled by a love for problem-solving
             and a relentless pursuit of knowledge. Specializing predominantly in

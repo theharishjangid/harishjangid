@@ -35,7 +35,7 @@
 .app__about__section{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
     @media screen and (max-width: 750px) {
         flex-direction: column-reverse;
@@ -50,6 +50,7 @@
     justify-content: center;
     flex-direction: column;
     margin: 1rem;
+    max-width: 30rem;
 
     img{
         width: 20rem;
@@ -81,8 +82,9 @@
 .app__about__info{
     color: var(--font-color);
     width: 50%;
+    max-width: 50rem;
 
-    h4{
+    h3{
         font-size: 1.1rem;
         font-weight: 400;
 
@@ -109,7 +111,7 @@
     }
 
     span{
-        color: var(--neutral-color);
+        color: var(--primary-color);
     }
 
     @media screen and (max-width: 750px) {
