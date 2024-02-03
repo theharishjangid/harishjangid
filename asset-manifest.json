@@ -1,8 +1,7 @@
 {
   "files": {
     "main.css": "/harishjangid/static/css/main.ba81bb18.css",
-    "main.js": "/harishjangid/static/js/main.f95b0960.js",
-    "static/media/profile.png": "/harishjangid/static/media/profile.a6a49a5fe7718f0aacdc.png",
+    "main.js": "/harishjangid/static/js/main.05dc2fa8.js",
     "static/media/python.svg": "/harishjangid/static/media/python.8c26374418f1f37e606973579626a864.svg",
     "static/media/cnr_rao.svg": "/harishjangid/static/media/cnr_rao.8063124c7ee1fff5aa2f3a72716754de.svg",
     "static/media/sjpuc.svg": "/harishjangid/static/media/sjpuc.66bcaba072d5c0ed478e8fd0b705aaa8.svg",
@@ -20,6 +19,7 @@
     "static/media/django.svg": "/harishjangid/static/media/django.d49337806698ec4ec13c837b2222717e.svg",
     "static/media/html.svg": "/harishjangid/static/media/html.ad1e271b57e75db26a3cfd3bf4462e8f.svg",
     "static/media/mongodb.svg": "/harishjangid/static/media/mongodb.46a3ee2bb4481b51c2fef772c3451f05.svg",
+    "static/media/profile.webp": "/harishjangid/static/media/profile.cbaee5547bb2dd5455e3.webp",
     "static/media/zinnov.svg": "/harishjangid/static/media/zinnov.53f197a278c27ef73ed49bf9c52c3d2c.svg",
     "static/media/git.svg": "/harishjangid/static/media/git.7300a70a9fea3d803c07ecf23b56fe0d.svg",
     "static/media/postgres.svg": "/harishjangid/static/media/postgres.3a01e89796edf1082430561d0776c41b.svg",
@@ -36,10 +36,10 @@
     "index.html": "/harishjangid/index.html",
     "static/media/profile_bg.svg": "/harishjangid/static/media/profile_bg.55be8e45f20ee9e9ae92b484271b366a.svg",
     "main.ba81bb18.css.map": "/harishjangid/static/css/main.ba81bb18.css.map",
-    "main.f95b0960.js.map": "/harishjangid/static/js/main.f95b0960.js.map"
+    "main.05dc2fa8.js.map": "/harishjangid/static/js/main.05dc2fa8.js.map"
   },
   "entrypoints": [
     "static/css/main.ba81bb18.css",
-    "static/js/main.f95b0960.js"
+    "static/js/main.05dc2fa8.js"
   ]
 }
