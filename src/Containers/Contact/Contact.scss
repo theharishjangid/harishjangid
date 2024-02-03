@@ -270,13 +270,14 @@
 }
 
 .app__contact_section-form_submit {
-    width: 100%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     color: var(--font-color);
     font-family: var(--font-base);
+    max-width: 30rem;
 
     svg {
         width: 7rem;
