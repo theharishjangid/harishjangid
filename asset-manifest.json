@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/harishjangid/static/css/main.61dccea8.css",
-    "main.js": "/harishjangid/static/js/main.77c749c2.js",
+    "main.js": "/harishjangid/static/js/main.6575b82b.js",
     "static/media/python.svg": "/harishjangid/static/media/python.8c26374418f1f37e606973579626a864.svg",
     "static/media/cnr_rao.svg": "/harishjangid/static/media/cnr_rao.8063124c7ee1fff5aa2f3a72716754de.svg",
     "static/media/sjpuc.svg": "/harishjangid/static/media/sjpuc.66bcaba072d5c0ed478e8fd0b705aaa8.svg",
@@ -24,22 +24,22 @@
     "static/media/git.svg": "/harishjangid/static/media/git.7300a70a9fea3d803c07ecf23b56fe0d.svg",
     "static/media/postgres.svg": "/harishjangid/static/media/postgres.3a01e89796edf1082430561d0776c41b.svg",
     "static/media/pes.svg": "/harishjangid/static/media/pes.bd2703ff26e3beb7e153cdd402d37781.svg",
+    "static/media/light_logo.svg": "/harishjangid/static/media/light_logo.09cb292436706f7ebd24e970f7379107.svg",
+    "static/media/logo.svg": "/harishjangid/static/media/logo.826222f2306d559c9d38d253b760d8f8.svg",
     "static/media/c.svg": "/harishjangid/static/media/c.89df9b86c942a6aeddea4abb2732fad7.svg",
     "static/media/javascript.svg": "/harishjangid/static/media/javascript.2c46815a4dd5acbaf96082cd27374474.svg",
     "static/media/react.svg": "/harishjangid/static/media/react.fd953f0deb890270fecf41a9a1d0645e.svg",
     "static/media/neo4j.svg": "/harishjangid/static/media/neo4j.712ee521de06dac769fce4a86a6c2c35.svg",
-    "static/media/light_logo.svg": "/harishjangid/static/media/light_logo.c9fffd6319048eb5860211fa88438881.svg",
-    "static/media/logo.svg": "/harishjangid/static/media/logo.9797de147e511fb366f34913ac0a3b1d.svg",
     "static/media/spyry.svg": "/harishjangid/static/media/spyry.1def00afe791a71cad1b3f7c3b01377c.svg",
     "static/media/draup.svg": "/harishjangid/static/media/draup.8746f67b7019fbcacf3ec6cf74340780.svg",
     "static/media/mysql.svg": "/harishjangid/static/media/mysql.d9ff83a2e09b7cae6760c0409e562cae.svg",
     "index.html": "/harishjangid/index.html",
     "static/media/profile_bg.svg": "/harishjangid/static/media/profile_bg.55be8e45f20ee9e9ae92b484271b366a.svg",
     "main.61dccea8.css.map": "/harishjangid/static/css/main.61dccea8.css.map",
-    "main.77c749c2.js.map": "/harishjangid/static/js/main.77c749c2.js.map"
+    "main.6575b82b.js.map": "/harishjangid/static/js/main.6575b82b.js.map"
   },
   "entrypoints": [
     "static/css/main.61dccea8.css",
-    "static/js/main.77c749c2.js"
+    "static/js/main.6575b82b.js"
   ]
 }
